@@ -1,0 +1,136 @@
+<html>
+    
+    <nav id= "navbar">
+      <header class="nav-head">
+        <h1>-Selenium with Python</h1>
+      </header>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="#Installation">Installation</a></li>
+        <li><a class="nav-link" href="#Getting_Started">Getting_Started</a></li>
+        <li><a class="nav-link" href="#Navigating">Navigating</a></li>
+        <li><a class="nav-link" href="#Locating_Elements">Locating_Elements</a></li>
+        <li><a class="nav-link" href="#Waits">Waits</a></li>
+        <li><a class="nav-link" href="#Page_Objects">Page_Objects</a></li>
+        <li><a class="nav-link" href="#WebDriver_API">WebDriver_API</a></li>
+        <li><a class="nav-link" href="#Appendix_Frequently">Appendix_Frequently</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" class="main-section" id="Installation">
+        <header><h2>Installation</h2></header>
+        <article class="text">
+        <h3>1.1. Introduction</h3>
+        <ul>
+        <li><p>Selenium Python bindings provides a simple API to write functional/acceptance tests using Selenium WebDriver. Through Selenium Python API you can access all functionalities of Selenium WebDriver in an intuitive way.</p></li>
+
+<li><p>Selenium Python bindings provide a convenient API to access Selenium WebDrivers like Firefox, Ie, Chrome, Remote etc. The current supported Python versions are 3.5 and above.</p></li>
+
+<li><p>This documentation explains Selenium 2 WebDriver API. Selenium 1 / Selenium RC API is not covered here.</p></li>
+      </ul>
+        <h3>1.2. Installing Python bindings for Selenium</h3>
+      <ul>
+        <li><p>Use pip to install the selenium package. Python 3 has pip available in the standard library. Using pip, you can install selenium like this:</p></li>
+
+        <li> <code>pip install selenium</code></li>
+<li><p>You may consider using virtualenv to create isolated Python environments. Python 3 has venv which is almost the same as virtualenv.</p></li>
+
+<li><p>You can also download Python bindings for Selenium from the PyPI page for selenium package. and install manually.</p></li>
+      </article>
+        
+      </section>
+      <section class="main-section" class="main-section" id="Getting_Started">
+        <header><h2>Getting_Started</h2></header>
+        <article class="text">
+        <h3>2.1. Simple Usage</h3>
+        <p>If you have installed Selenium Python bindings, you can start using it from Python like this.<br>
+
+<code>from selenium import webdriver<br>
+  from selenium.webdriver.common.keys import Keys<br></code>
+
+          <code>driver = webdriver.Firefox() <br>
+driver.get("http://www.python.org")<br>
+assert "Python" in driver.title<br>
+elem = driver.find_element_by_name("q")<br>
+elem.clear()<br>
+elem.send_keys("pycon")<br>
+elem.send_keys(Keys.RETURN)<br>
+assert "No results found." not in driver.page_source<br>
+  driver.close()<br></code>
+The above script can be saved into a file (eg:- python_org_search.py), then it can be run like this:<br>
+
+python python_org_search.py<br>
+The python which you are running should have the selenium module installed.<br></p>
+      </article>
+      </section>
+      <section class="main-section" class="main-section" id="Navigating">
+        <header><h2>Navigating</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <code>driver.get("http://www.google.com")</code>
+      </article>
+      </section>
+      <section class="main-section" class="main-section" id="Locating_Elements">
+        <header><h2>Locating_Elements</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <code>from selenium.webdriver.common.by import By
+
+driver.find_element(By.XPATH, '//button[text()="Some text"]')
+driver.find_elements(By.XPATH, '//button')</code>
+      </article>
+      </section>
+      <section class="main-section" class="main-section" id="Waits">
+        <header><h2>Waits</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <code>content = driver.find_element_by_class_name('content')</code>
+        </article>
+      </section>
+      <section class="main-section" class="main-section" id="Page_Objects">
+        <header><h2>Page_Objects</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        <code>from selenium.webdriver.support.ui import WebDriverWait</code>
+      </article>
+      </section>
+      <section class="main-section" class="main-section" id="WebDriver_API">
+        <header><h2>WebDriver_API</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        </article>
+      </section>
+      <section class="main-section" class="main-section"id="Appendix_Frequently">
+        <header><h2>Appendix_Frequently</h2></header>
+        <article class="text">
+        <h3>1.Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, porttitor vestibulum convallis eleifend nulla cum in, penatibus dictumst vulputate egestas mauris molestie. Dictumst ultrices class lobortis parturient nibh tellus placerat, venenatis ante libero enim mauris curabitur. Semper iaculis donec et nunc blandit potenti proin cum, turpis purus magnis duis imperdiet congue neque, elementum vitae per dis risus sollicitudin lacinia.
+
+Libero pulvinar lacus dignissim dictumst vestibulum bibendum per, cum porta magna nec luctus proin ante orci, quam velit curae ultricies auctor feugiat. Commodo gravida purus eros orci aptent duis vehicula a porttitor dui, mauris massa congue bibendum nec quis eleifend id varius, posuere donec ligula egestas ullamcorper scelerisque praesent neque vel. Ridiculus netus ultricies feugiat himenaeos rhoncus erat ornare congue auctor, donec dictumst urna a eleifend imperdiet sagittis nam dui, sem dignissim aptent lacus conubia cras fusce lectus.</p>
+        </article>
+     </section>
+    </main>
+</html>
